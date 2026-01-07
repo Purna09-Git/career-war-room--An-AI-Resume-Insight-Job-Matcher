@@ -2,12 +2,9 @@
 
 > **Career War Room** - An AI-powered resume analysis and job matching platform built with Python backend and vanilla JavaScript frontend.
 
-![Tech Stack](https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-blue)
-![Backend](https://img.shields.io/badge/Backend-Python%20%7C%20FastAPI-green)
-![AI](https://img.shields.io/badge/AI-Google%20Gemini-orange)
 <img width="1227" height="719" alt="image" src="https://github.com/user-attachments/assets/6e05e67c-d92d-4d22-866e-70c363ab12cc" />
 
-## 🎯 Features
+##  Features
 
 - **Neural Resume Parsing**: AI-powered extraction of skills, experience, and education from resume documents
 - **Job Matching Engine**: Intelligent job recommendations with match scores based on your profile
@@ -15,7 +12,7 @@
 - **Multi-Format Support**: Upload resumes in PDF, DOCX, or TXT format
 - **Military-Tactical Theme**: Unique "War Room" inspired UI/UX design
 
-## 📁 Tech Stack
+##  Tech Stack
 
 ### Frontend
 - **HTML5**: Semantic markup
@@ -33,7 +30,7 @@
 ### Database
 - **MongoDB**: Document storage for analysis results
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
