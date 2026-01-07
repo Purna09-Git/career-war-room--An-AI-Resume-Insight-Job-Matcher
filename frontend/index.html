@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Insight & Job Matcher - Career War Room</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="app" class="app">
+        <!-- Navigation -->
+        <nav class="glass nav-bar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <div class="logo-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-title">NEXT STEP</span>
+                        <span class="logo-subtitle">Career War Room</span>
+                    </div>
+                </div>
+                
+                <div class="nav-actions">
+                    <div class="status-indicator">
+                        <div class="status-dot"></div>
+                        <span class="status-text">System Online</span>
+                    </div>
+                    <div class="auth-buttons">
+                        <button class="btn-sign-in" onclick="openAuthModal('login')">Sign In</button>
+                        <button class="btn-enter" onclick="openAuthModal('signup')">Enter the Room</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main id="mainContent" class="main-content">
+            <!-- Landing Page -->
+            <div id="landingPage" class="landing-page">
+                <div class="landing-grid">
+                    <!-- Left Content -->
+                    <div class="landing-left">
+                        <div class="badge">
+                            <i class="fa-solid fa-satellite-dish"></i>
+                            Advanced Intelligence Analysis
+                        </div>
+                        <h1 class="landing-title">
+                            Master Your <span class="text-blue">Career</span> Battlefield.
+                        </h1>
+                        <p class="landing-description">
+                            The ultimate AI-powered command center for professionals. We use high-fidelity neural processing to map your skills against real-world market intelligence.
+                        </p>
+
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <div class="feature-icon bg-blue">
+                                    <i class="fa-solid fa-microchip"></i>
+                                </div>
+                                <h3 class="feature-title">Neural Parsing</h3>
+                                <p class="feature-desc">Extract deep-level experience metrics and hidden proficiencies from your resume intelligence.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon bg-indigo">
+                                    <i class="fa-solid fa-bullseye"></i>
+                                </div>
+                                <h3 class="feature-title">Target Matcher</h3>
+                                <p class="feature-desc">Semantic similarity ranking matches your profile to high-yield opportunities in real-time.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon bg-amber">
+                                    <i class="fa-solid fa-map-location-dot"></i>
+                                </div>
+                                <h3 class="feature-title">Gap Strategy</h3>
+                                <p class="feature-desc">Detailed analysis of missing critical weaponry (skills) needed to command higher salaries.</p>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon bg-emerald">
+                                    <i class="fa-solid fa-user-shield"></i>
+                                </div>
+                                <h3 class="feature-title">Privacy Secure</h3>
+                                <p class="feature-desc">All intelligence processing is handled under strict protocol. Your data is your ammunition.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Content - Upload Zone -->
+                    <div class="landing-right">
+                        <div class="upload-wrapper">
+                            
+                            <div id="locked-message" class="upload-card" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 40px;">
+                                <div style="background: rgba(255,255,255,0.05); padding: 25px; border-radius: 50%; margin-bottom: 25px; border: 1px solid rgba(255,255,255,0.1);">
+                                    <i class="fa-solid fa-lock" style="font-size: 2.5rem; color: #94a3b8;"></i>
+                                </div>
+                                <h2 style="font-size: 1.8rem; margin-bottom: 10px; color: white;">Restricted Access</h2>
+                                <p style="color: #94a3b8; margin-bottom: 30px; line-height: 1.6;">
+                                    This terminal is classified. Authentication is required to access the Neural Analysis Engine.
+                                </p>
+                                <button class="upload-button" onclick="openAuthModal('login')" style="width: auto; padding: 0 30px;">
+                                    <i class="fa-solid fa-fingerprint"></i> Authenticate
+                                </button>
+                            </div>
+
+                            <div id="upload-section" class="upload-card" style="display: none;">
+                                <div class="upload-card-inner">
+                                    <div class="upload-header">
+                                        <h2 class="upload-title">Intelligence Intake</h2>
+                                        <p class="upload-subtitle">Upload your professional profile for analysis</p>
+                                    </div>
+
+                                    <div id="fileUploadZone" class="file-upload-zone">
+                                        <input type="file" id="fileInput" accept=".pdf,.docx,.txt" style="display: none;">
+                                        
+                                        <div class="file-icon-wrapper">
+                                            <div class="file-icon">
+                                                <div class="file-icon-corner"></div>
+                                                <i class="fa-solid fa-file-invoice"></i>
+                                            </div>
+                                            <div class="file-icon-bg file-icon-bg-1"></div>
+                                            <div class="file-icon-bg file-icon-bg-2"></div>
+                                        </div>
+
+                                        <div class="upload-text">
+                                            <h3 class="upload-text-title">Drop Your Resume</h3>
+                                            <p class="upload-text-desc">
+                                                Our tactical engine supports<br/>
+                                                <span class="text-blue">PDF • DOCX • TXT</span>
+                                            </p>
+                                        </div>
+
+                                        <button class="upload-button" id="uploadButton">
+                                            <i class="fa-solid fa-plus"></i>
+                                            Browse Local Command
+                                        </button>
+
+                                        <div class="upload-corner upload-corner-tl"></div>
+                                        <div class="upload-corner upload-corner-tr"></div>
+                                        <div class="upload-corner upload-corner-bl"></div>
+                                        <div class="upload-corner upload-corner-br"></div>
+                                    </div>
+
+                                    <div id="loadingState" class="loading-state" style="display: none;">
+                                        <div class="loading-spinner">
+                                            <i class="fa-solid fa-satellite-dish fa-spin"></i>
+                                        </div>
+                                        <p class="loading-text">Scanning Bio-data...</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="errorMessage" class="error-message" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard -->
+            <div id="dashboardPage" class="dashboard-page" style="display: none;"></div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <div class="footer-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <p class="footer-text">NEXT STEP © 2025 PROTOCOL</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Rules of Engagement</a>
+                    <a href="#" class="footer-link">Secure Link</a>
+                    <a href="#" class="footer-link">Support Command</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal" style="display: none;">
+        <div class="modal-backdrop" onclick="closeAuthModal()"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <i class="fa-solid fa-chess-knight"></i>
+                </div>
+                <h1 class="modal-title">Access Terminal</h1>
+                <p class="modal-subtitle">Status: Restricted</p>
+            </div>
+
+            <div class="auth-card">
+                <div class="auth-card-header">
+                    <h2 id="authCardTitle" class="auth-card-title">Commander Login</h2>
+                    <button class="modal-close" onclick="closeAuthModal()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <form id="authForm" class="auth-form">
+                    <div id="nameField" class="form-field" style="display: none;">
+                        <label class="form-label">Callsign (Name)</label>
+                        <input type="text" class="form-input" placeholder="e.g. Maverick">
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Identity (Email)</label>
+                        <input type="email" class="form-input" placeholder="commander@nextstep.ai" required>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-label">Access Key</label>
+                        <input type="password" class="form-input" placeholder="••••••••" required>
+                    </div>
+
+                    <button type="submit" class="form-submit">
+                        <span id="submitText">Initialize Session</span>
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </form>
+
+                <div class="auth-toggle">
+                    <button id="authToggle" class="auth-toggle-btn" onclick="toggleAuthMode()">
+                        No Credentials? Create Command
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
