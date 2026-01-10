@@ -1,6 +1,6 @@
 # AI Resume Insight & Job Matcher
 
-> **Career War Room** - An AI-powered resume analysis and job matching platform built with Python backend and vanilla JavaScript frontend.
+> **Career War Room** - An AI-powered resume analysis and job matching platform built with Python backend and  JavaScript frontend.
 
 <img width="1227" height="719" alt="image" src="https://github.com/user-attachments/assets/6e05e67c-d92d-4d22-866e-70c363ab12cc" />
 
